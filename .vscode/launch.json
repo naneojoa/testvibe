@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-BoardApplication<backend>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/backend",
+            "mainClass": "com.example.board.BoardApplication",
+            "projectName": "backend",
+            "args": [
+                "--spring.profiles.active=local",
+                "--debug=false",
+                "--logging.level.root=INFO"
+            ],
+            "envFile": "${workspaceFolder}/.env.local",
+            "console": "internalConsole"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:board;MODE=PostgreSQL;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  flyway:
+    enabled: false
+
+app:
+  security:
+    jwt-secret: dGVzdC1qd3Qtc2VjcmV0LXdpdGgtYXQtbGVhc3QtMzItYnl0ZXM=
+    ip-hmac-secret: test-ip-hmac-secret
+    cookie-secure: false
+    access-token-seconds: 900
+    refresh-token-seconds: 604800

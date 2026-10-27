@@ -1,0 +1,16 @@
+.env
+.env.*
+!*.example
+.gradle/
+.pnpm-store/
+debug.log
+backend/.gradle/
+backend/build/
+build/
+bin/
+frontend/node_modules/
+frontend/dist/
+frontend/coverage/
+frontend/test-results/
+frontend/playwright-report/
+frontend/blob-report/
