@@ -29,7 +29,7 @@
 두 번째 테스트 에이전트는 .agents/roles/board-tester.md와
 .agents/skills/board-test/SKILL.md, 검증 계획을 읽고 테스트를 보완·실행해줘.
 그 결과를 검증 에이전트에 전달해 증거를 독립적으로 검토해줘.
-docs/quality-agents.md의 전달 절차와 파일 소유권을 따라줘.
+docs/quality/quality-agents.md의 전달 절차와 파일 소유권을 따라줘.
 제품 코드는 수정하지 말고 격리 DB가 확인되지 않은 데이터 변경 테스트는 실행하지 마.
 보고서는 docs/validation/<이번 실행 ID>/에 남겨줘.
 필수 항목이 BLOCKED, SKIPPED, NOT RUN이면 전체 PASS로 선언하지 마.

@@ -4,6 +4,9 @@
 .gradle/
 .pnpm-store/
 debug.log
+artifacts/
+__pycache__/
+*.pyc
 backend/.gradle/
 backend/build/
 build/

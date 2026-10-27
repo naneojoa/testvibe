@@ -10,7 +10,7 @@
 
 이 문서는 API 테스트 케이스의 정의와 현재 자동화·실행 현황을 함께 관리한다. 문서별 책임은 다음과 같다.
 
-- `backend-api-spec.md`: 무엇을 구현해야 하는지 정의하는 API 계약
+- `../contracts/backend-api-spec.md`: 무엇을 구현해야 하는지 정의하는 API 계약
 - 이 문서: 계약을 어떤 조건과 입력으로 검증할지 정의하는 테스트 케이스
 - `spec-test-traceability.md`: 계약 ID와 자동화 테스트 파일의 연결
 - CI 테스트 리포트 또는 이 문서의 실행 이력: 특정 실행 회차의 `PASS`, `FAIL`, `SKIP` 증적

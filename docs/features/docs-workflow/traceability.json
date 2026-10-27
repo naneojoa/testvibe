@@ -1,0 +1,28 @@
+{
+  "criteria": [
+    {
+      "id": "AC-001",
+      "requirement": "REQ-001",
+      "source": "docs/requirements/REQ-001.md",
+      "tests": ["harness/tests/test_check.py"]
+    },
+    {
+      "id": "AC-002",
+      "requirement": "REQ-001",
+      "source": "docs/requirements/REQ-001.md",
+      "tests": ["harness/tests/test_check.py"]
+    },
+    {
+      "id": "AC-003",
+      "requirement": "REQ-001",
+      "source": "docs/requirements/REQ-001.md",
+      "tests": ["harness/tests/test_product.py"]
+    },
+    {
+      "id": "AC-004",
+      "requirement": "REQ-001",
+      "source": "docs/requirements/REQ-001.md",
+      "tests": ["harness/tests/test_product.py"]
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-name: Frontend quality
+name: Quality
 
 on:
   pull_request:
@@ -8,14 +8,29 @@ permissions:
   contents: read
 
 jobs:
-  verify:
+  docs-harness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m unittest discover -s harness/tests -v
+      - run: python harness/check.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: docs-harness-result
+          path: artifacts/harness-result.json
+
+  frontend:
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: frontend
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v22
+      - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: pnpm
@@ -26,3 +41,18 @@ jobs:
       - run: pnpm lint
       - run: pnpm test
       - run: pnpm build
+
+  backend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: gradle/actions/setup-gradle@v4
+      - run: chmod +x gradlew
+      - run: ./gradlew spotlessCheck test --no-daemon
