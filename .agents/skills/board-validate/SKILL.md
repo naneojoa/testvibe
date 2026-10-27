@@ -5,7 +5,7 @@ description: 게시판 명세와 구현 및 테스트 증거를 비교해 검증
 
 # 게시판 검증 절차
 
-`.agents/roles/board-validator.md`의 역할 지침을 먼저 읽고, `AGENTS.md`, `docs/engineering-playbook.md`, `docs/quality-agents.md`를 따른다. 요청 범위에 맞는 백엔드·프론트 계약, API 테스트 시나리오, 명세·테스트 추적표를 확인한다.
+`.agents/roles/board-validator.md`의 역할 지침을 먼저 읽고, `AGENTS.md`, `docs/operations/engineering-playbook.md`, `docs/quality/quality-agents.md`를 따른다. 요청 범위에 맞는 백엔드·프론트 계약, API 테스트 시나리오, 명세·테스트 추적표를 확인한다.
 
 1. 범위와 소스 상태를 기록한다. Git 메타데이터를 사용할 수 없으면 확인 가능한 파일과 한계를 적는다.
 2. 시나리오별 계약·구현·기존 테스트의 실제 assertion을 대조한다. 미정 정책은 `DECISION_NEEDED`로 둔다.

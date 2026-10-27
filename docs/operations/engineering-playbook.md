@@ -2,7 +2,7 @@
 
 ## 목적
 
-프로젝트 전체에서 사용하는 구현·검토 지침이다. 반복해서 적용할 작업 규칙을 정하며, API와 사용자 경험의 상세 계약은 `backend-api-spec.md`와 `front-spec.md`를 기준으로 한다.
+프로젝트 전체에서 사용하는 구현·검토 지침이다. 반복해서 적용할 작업 규칙을 정하며, API와 사용자 경험의 상세 계약은 `../contracts/backend-api-spec.md`와 `../contracts/front-spec.md`를 기준으로 한다.
 
 ## 코드 변경 전 확인
 
@@ -23,7 +23,7 @@
 
 ## 백엔드와 계약 규칙
 
-- API 계약을 변경할 때 `backend-api-spec.md`, TypeScript DTO, 입력 검증, 테스트를 같은 작업에서 갱신한다.
+- API 계약을 변경할 때 `../contracts/backend-api-spec.md`, TypeScript DTO, 입력 검증, 테스트를 같은 작업에서 갱신한다.
 - API 경계에는 DTO를, 트랜잭션 경계에는 Service를 사용한다. 목록·검색 조회에는 QueryDSL을 사용하고, 스키마 변경은 Flyway로만 수행한다.
 - 이미 적용한 Flyway 마이그레이션은 수정하지 않는다. 새 버전의 마이그레이션을 추가한다.
 - 인증·권한 관련 UI는 사용자 편의를 위한 것이다. 실제 접근 허용 여부는 Spring Security와 Service 계층의 검사를 기준으로 판단한다.

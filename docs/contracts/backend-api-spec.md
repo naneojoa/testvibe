@@ -4,7 +4,7 @@
 
 이 문서는 게시판 백엔드의 공개 API 계약과 도메인 규칙의 기준 문서다. API URI, 요청·응답 DTO, 인증·권한, 오류 코드 또는 조회 규칙을 변경할 때 구현과 함께 갱신한다.
 
-지속적으로 지켜야 하는 API 계약, 트랜잭션 경계, 보안 원칙과 그 결정 사유는 이 문서에 기록한다. 특정 작업에서 수정한 파일과 실행한 검증 같은 구현 이력은 `implementation-improvements.md`에 기록하고, 이 문서의 변경 이력에는 계약에 영향을 주는 결과만 요약한다.
+지속적으로 지켜야 하는 API 계약, 트랜잭션 경계, 보안 원칙과 그 결정 사유는 이 문서에 기록한다. 특정 작업에서 수정한 파일과 실행한 검증 같은 구현 이력은 `../history/implementation-improvements.md`에 기록하고, 이 문서의 변경 이력에는 계약에 영향을 주는 결과만 요약한다.
 
 - 기본 URL: `/api`
 - 콘텐츠 유형: `application/json`
@@ -189,7 +189,7 @@
 - 기존 마이그레이션 파일은 수정하지 않는다.
 - 첫 ADMIN 계정은 `ADMIN_EMAIL`, `ADMIN_PASSWORD_HASH` 환경변수 Flyway placeholder로 만든다.
 - DB 비밀번호, JWT 비밀키, IP HMAC 비밀키, 비밀번호 원문은 코드·문서·Git에 저장하지 않는다.
-- 실행 환경 변수와 명령은 `docs/backend-operations.md`를 따른다.
+- 실행 환경 변수와 명령은 `docs/operations/backend-operations.md`를 따른다.
 
 ## 10. 애플리케이션 계층과 트랜잭션 기준
 
@@ -220,7 +220,7 @@
 - 게시글 검색어 최대 길이와 정렬 허용값, 관리자 페이지 범위를 검증한다.
 - 댓글 트리 조회와 게시글 단건 조회에 필요한 연관관계를 명시적으로 함께 조회한다.
 - H2 기반 회귀 테스트 9개가 성공했다. PostgreSQL 함수·트리거와 실제 브라우저 CSRF 통합은 별도 실환경 점검이 남아 있다.
-- 상세 수정 파일과 검증 명령은 `implementation-improvements.md`에 기록했다.
+- 상세 수정 파일과 검증 명령은 `../history/implementation-improvements.md`에 기록했다.
 
 ### 2026-07-22
 

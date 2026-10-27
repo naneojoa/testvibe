@@ -46,8 +46,8 @@
 
 ## 백엔드 명세 참조
 
-- API, 요청·응답 DTO, 오류 코드, 인증·권한 또는 도메인 규칙을 변경하기 전에 `docs/backend-api-spec.md`를 확인한다.
-- 위 계약을 변경하면 구현 코드와 `docs/backend-api-spec.md`를 같은 작업에서 함께 갱신한다.
+- API, 요청·응답 DTO, 오류 코드, 인증·권한 또는 도메인 규칙을 변경하기 전에 `docs/contracts/backend-api-spec.md`를 확인한다.
+- 위 계약을 변경하면 구현 코드와 `docs/contracts/backend-api-spec.md`를 같은 작업에서 함께 갱신한다.
 
 ## API 규칙
 
@@ -104,8 +104,12 @@
 
 ## Quality and handoff references
 
-- Read `docs/engineering-playbook.md` before non-trivial implementation or review work.
-- Treat `docs/backend-api-spec.md` and `docs/front-spec.md` as the current product and API contracts.
-- Update `docs/spec-test-traceability.md` whenever a contract scenario or its automated evidence changes.
-- Follow `docs/quality-validation-plan.md` and `docs/release-checklist.md`; a skipped E2E suite is not a passing suite.
+- Start non-trivial work with `docs/workflow.md`, then read only the relevant feature and contract documents.
+- Read `docs/operations/engineering-playbook.md` before non-trivial implementation or review work.
+- Treat `docs/contracts/backend-api-spec.md` and `docs/contracts/front-spec.md` as the current product and API contracts.
+- Update the feature `traceability.json` and `docs/quality/spec-test-traceability.md` whenever acceptance criteria or automated evidence changes.
+- Follow `docs/quality/quality-validation-plan.md` and `docs/operations/release-checklist.md`; a skipped E2E suite is not a passing suite.
+- Run `python -m unittest discover -s harness/tests -v` and `python harness/check.py` after documentation-structure changes.
+- Keep customer source statements under `docs/requirements/`; distinguish confirmed facts, assumptions, and open questions.
+- Use `docs/features/<feature-id>/spec.md` for feature PRDs and observable acceptance criteria.
 - Frontend standard verification is `pnpm format:check`, `pnpm lint`, `pnpm test`, and `pnpm build`.

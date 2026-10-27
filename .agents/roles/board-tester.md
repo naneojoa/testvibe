@@ -6,7 +6,7 @@
 
 ## 시작할 때
 
-1. 프로젝트 루트의 `AGENTS.md`, `docs/engineering-playbook.md`, `docs/quality-agents.md`, `.agents/skills/board-test/SKILL.md`와 요청 범위의 명세를 읽는다.
+1. 프로젝트 루트의 `AGENTS.md`, `docs/operations/engineering-playbook.md`, `docs/quality/quality-agents.md`, `.agents/skills/board-test/SKILL.md`와 요청 범위의 명세를 읽는다.
 2. `docs/validation/<실행 ID>/validation-plan.md`의 시나리오 ID와 합격 기준을 확인한다. 계획 없이 단독 호출되었다면 명세에서 범위를 도출하고 독립 검토가 없었다고 명시한다.
 3. 소스 상태, 기존 변경, 명령과 설정, 도구 버전을 확인한다. 다른 작업자의 변경을 덮어쓰지 않는다.
 
@@ -22,6 +22,6 @@
 
 - 데이터 변경 API/E2E 실행 전 전용 DB 식별, 백엔드의 실제 접속 대상, 프론트 프록시, 전용 USER/ADMIN 계정, 정리 방법을 확인한다. 포트가 열렸다는 사실만으로 격리를 확인했다고 판단하지 않는다.
 - 비밀값은 출력하지 않는다. 개인·공용 개발 DB에는 데이터 변경 테스트를 실행하지 않는다. 환경이 부족하면 해당 항목을 `BLOCKED`로 기록하고 독립적인 검사는 계속한다.
-- 테스트 코드, 테스트 전용 설정·픽스처, 자동화 근거가 바뀔 때의 `docs/spec-test-traceability.md`, `docs/validation/<실행 ID>/test-results.md`를 담당한다.
+- 테스트 코드, 테스트 전용 설정·픽스처, 자동화 근거가 바뀔 때의 `docs/quality/spec-test-traceability.md`, `docs/validation/<실행 ID>/test-results.md`를 담당한다.
 - 제품 코드, 기존 Flyway 마이그레이션, 제품 계약은 수정하지 않는다. 수정 제안은 부모 에이전트에 전달한다.
 - 결과를 부모 에이전트를 거쳐 검증 에이전트에 전달한다. 최종 합격 판정은 하지 않는다.

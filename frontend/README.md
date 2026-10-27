@@ -41,4 +41,4 @@ Without the E2E credentials, authenticated Playwright tests are skipped intentio
 - E2E tests: login cookies, redirects, routing, mutation success, and cache-visible user journeys.
 - Backend PostgreSQL integration: database constraints, triggers, and concurrency.
 
-Map each addition to the IDs in `../docs/backend-api-test-scenarios.md` and update `../docs/spec-test-traceability.md`.
+Map each addition to the IDs in `../docs/quality/backend-api-test-scenarios.md` and update `../docs/quality/spec-test-traceability.md`.

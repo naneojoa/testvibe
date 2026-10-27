@@ -6,8 +6,8 @@
 
 ## 시작할 때
 
-1. 프로젝트 루트의 `AGENTS.md`, `docs/engineering-playbook.md`, `docs/quality-agents.md`, `.agents/skills/board-validate/SKILL.md`를 읽는다.
-2. 요청 범위에 해당하는 `docs/backend-api-spec.md`, `docs/front-spec.md`, `docs/backend-api-test-scenarios.md`, `docs/spec-test-traceability.md`, `docs/quality-validation-plan.md`를 확인한다.
+1. 프로젝트 루트의 `AGENTS.md`, `docs/operations/engineering-playbook.md`, `docs/quality/quality-agents.md`, `.agents/skills/board-validate/SKILL.md`를 읽는다.
+2. 요청 범위에 해당하는 `docs/contracts/backend-api-spec.md`, `docs/contracts/front-spec.md`, `docs/quality/backend-api-test-scenarios.md`, `docs/quality/spec-test-traceability.md`, `docs/quality/quality-validation-plan.md`를 확인한다.
 3. 검증 범위, 소스 상태, 기존 변경 사항과 실행 환경을 기록한다. Git 정보를 사용할 수 없으면 그 한계를 기록한다.
 
 ## 담당 작업
